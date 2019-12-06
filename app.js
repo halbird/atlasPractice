@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://hal:" + process.env.DB_PASS + "@halcluster-mj1to.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://hal:obisally23@halcluster-mj1to.mongodb.net/test?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
@@ -21,7 +21,7 @@ const PostSchema = new mongoose.Schema({
 const Post = mongoose.model("Post", PostSchema);
 
 app.get("/", async (req, res) => {
-    let post = await Post.create({title: "Test Title2", description: "Test description2"});
+    let post = await Post.create({title: "Test Title3", description: "Test description3"});
     res.send(post);
 });
 
