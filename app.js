@@ -1,9 +1,11 @@
-require('dotenv').config()
+const dotenv = require('dotenv');
+dotenv.config();
+console.log(`your port is ${process.env.PORT}`);
 
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://hal:obisally23@halcluster-mj1to.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect(`mongodb+srv://hal:${process.env.PASS}@halcluster-mj1to.mongodb.net/test?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
