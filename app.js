@@ -25,6 +25,6 @@ app.get("/", async (req, res) => {
     res.send(post);
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log("server listening on port 3000");
 });
