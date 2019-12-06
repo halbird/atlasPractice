@@ -1,0 +1,15 @@
+{
+  "name": "atlaspractice",
+  "version": "1.0.0",
+  "description": "practice app to switch from mlab to atlas",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hal",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.7.13"
+  }
+}
