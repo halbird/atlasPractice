@@ -1,16 +1,15 @@
-// const dotenv = require('dotenv');
-// dotenv.config();
-console.log(`your port is ${process.env.PORT}`);
+const dotenv = require('dotenv');
+dotenv.config();
 
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-mongoose.connect(`mongodb+srv://hal:${process.env.PASS}@halcluster-mj1to.mongodb.net/test?retryWrites=true&w=majority`, {
+mongoose.connect(process.env.DB_URL, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
 }).then(() => {
-    console.log("connected to alas DB");
+    console.log("connected to DB");
 }).catch(err => {
     console.log("error: ", err.message);
 });
@@ -28,5 +27,5 @@ app.get("/", async (req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
-    console.log("server listening on port 3000");
+    console.log(`server listening on port ${process.env.PORT}`);
 });
