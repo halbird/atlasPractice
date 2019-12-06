@@ -21,7 +21,7 @@ const PostSchema = new mongoose.Schema({
 const Post = mongoose.model("Post", PostSchema);
 
 app.get("/", async (req, res) => {
-    let post = await Post.create({title: "Test Title", description: "Test description"});
+    let post = await Post.create({title: "Test Title2", description: "Test description2"});
     res.send(post);
 });
 
