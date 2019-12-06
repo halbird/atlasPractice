@@ -22,7 +22,7 @@ const PostSchema = new mongoose.Schema({
 const Post = mongoose.model("Post", PostSchema);
 
 app.get("/", async (req, res) => {
-    let post = await Post.create({title: "Did it really work??", description: "You bet it did!"});
+    let post = await Post.create({title: "This is an example post title.", description: "This is an example description blah blah words go here."});
     res.send(post);
 });
 
